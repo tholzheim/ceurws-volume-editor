@@ -181,8 +181,10 @@ Returns:
                         </span>
                     </span>
                 </span>
-            {%  else %}
+            {%  elif volume.start_date %}
                 <span property="dcterms:date" content="{{ volume.start_date }}" datatype="xsd:date">{{ volume.start_date.strftime("%B") }} {{ volume.start_date.day }}, {{ volume.start_date.year }}</span>
+            {% else %}
+
             {% endif %}
         </span>.
     </h3>

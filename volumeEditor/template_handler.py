@@ -19,7 +19,7 @@ class VolumePageTemplate():
         if not isinstance(volume_record, Dict):
             volume_record = Dict(volume_record)
         from jinja2 import Environment, PackageLoader, select_autoescape
-        env = Environment(loader=PackageLoader("volparser"), autoescape=select_autoescape())
+        env = Environment(loader=PackageLoader("volumeEditor"), autoescape=select_autoescape())
         template = env.get_template("volume_index.jinja2")
         return template.render(
                 volume=volume_record,
