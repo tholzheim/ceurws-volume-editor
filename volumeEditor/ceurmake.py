@@ -2,8 +2,8 @@ import datetime
 
 import justpy as jp
 from addict import Dict
+from volumeEditor.demo import Demo
 
-from volumeEditor.DropZone import Demo
 from volumeEditor.template_handler import VolumePageTemplate
 from volumeEditor.volume_form import VolumeForm
 
@@ -80,7 +80,10 @@ class CeurVolumeForm(jp.Div):
         )
 
 
-if __name__ == '__main__':
+def main():
+    """
+    start volume editor
+    """
     def test_app():
         jp.WebPage.debug = True
         wp = jp.WebPage(head_html='<script src="https://cdn.tailwindcss.com"></script>')
@@ -88,3 +91,6 @@ if __name__ == '__main__':
         CeurVolumeForm(a=div)
         return wp
     Demo("test_app", test_app)
+
+if __name__ == '__main__':
+    main()

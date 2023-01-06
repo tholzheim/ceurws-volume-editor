@@ -12,8 +12,8 @@ from pdfminer.pdfpage import PDFPage
 from pdfminer.pdfparser import PDFParser
 from pdfminer.pdftypes import resolve1
 from pdfminer.utils import FileOrName
+from volumeEditor.xmp import xmp_to_dict
 
-from xmp import xmp_to_dict
 
 def parse_pdf(filename: str):
     fp = open(filename, 'rb')
